@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <!--Loading the header-->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script> 
+    $(function(){
+      $("#header").load("header.html"); 
+    });
+  </script> 
+  <body>
+    <div id="header"></div>
+    <main>
+
+      <div class="container">
+
+        <div class="content">
+
+          <div class="row">
+
+            <div class="col">
+              <div class="background1">
+
+                <h2>Start New Session</h2>
+
+                <div class="col-content">
+                  <p>
+                    Click here to start a new session!
+                  </p>
+                  <div class="row justify-content-end">
+                    
+                    <div class="col">
+                      <a id="start-session" href="demonstration.html">Start!</a>
+                    </div>
+
+                    <div class="col ">
+                      <button id="settings">Settings</button>
+                      <!--TODO-->
+                      <!--Set up interactive settings panel to choose time limit, etc.-->
+                    </div>
+                    
+                  </div>
+                  
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col">
+              <div class="background1"> 
+                <h2>Previous Session Statistics</h2>
+
+                <div class="col-content">
+                  <p>
+                    Summary of previous 5 sessions
+                  </p>
+                  <!--Would like to display a graph of something-->
+                  <div id="graph">
+                    graph goes here
+                  </div>
+                  <a href="#">View in more detail</a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <br><!--Some asthetic looking line break-->
+
+          <div class="row">
+
+            <div class="col-md-7">
+              <div class="background1">
+                <h2>Your Goal</h2>
+                <div class="col-content">
+                  <p>Seems like you haven't set a goal yet!</p>
+                </div>
+                <br>
+                <h2> Mission Statement</h2>
+                <div class="col-content">
+                  <p>Mission Statement?</p>
+                  <p>More can be found <a href="#">here</a>.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="background1">
+                <h2>Study Mode</h2>
+                <div class="col-content">
+                  <p>Click here to enter <a href="#">Study Mode</a></p>
+                  <p>Different method of learning:</p>
+                  <ul>
+                    <li>Showing words and information</li>
+                    <li>Study through theory rather than experience</li>
+                  </ul>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+
+    </main>
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>

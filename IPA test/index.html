@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Rough Draft</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-5.1.3-examples/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">About section of the website.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <ul class="list-unstyled">
+                  <!--would need to put link in the href section-->
+                <li><a href="#" class="text-white">Possibly include email or phone number here</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <!--place logo here-->
+            <strong>Name of website</strong>
+          </a>
+          <!--Button works because of JS-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div>
+        <script src="text-to-ipa.js"></script> 
+        <script src="vocab-list.js"></script>
+        <script src="converter-form.js"></script>
+        <script>
+          window.onload = TextToIPA.loadDict('ipadict.txt');
+          window.onload = VocabList.loadDict('1stGradeWordEtymologyList.txt');
+          var msg = new SpeechSynthesisUtterance();
+        </script>
+        <div id="js-text-to-ipa-form">
+          <ul style="list-style-type: none;">
+            <!-- ipa-in is the designated ID to determine where text will be input from -->
+            <li>
+              <!-- This submit button runs the conversion on the input text
+            As you can see, when this buton is pressed, the conver() function is ran
+            where the input, output, and error IDs are given as parameters.
+            These can be set to whatever you like, as long as inID and outID are text areas, and errID is a div.
+            -->
+              <input type="text" id="ipa-in" placeholder="Write text here">
+              <button type="submit" onClick="ConverterForm.convert('ipa-in', 'ety-out', 'ipa-err', 'ETY');">Submit</button>
+            </li>
+            <li>
+              <div id="ety-out">
+                <!-- ety-out is the designated ID to determine where the converted text will be output to -->
+                <p>
+                  temporary text
+                </p>
+              </div>
+          </li>
+      
+          </ul>
+      
+          <ul style="list-style-type: none;">
+            <li><noscript><p>This converter will not work unless Javascript is enabled.</p></noscript></li>
+            <li>
+              <!-- ipa-err is the designated ID to determine where any errors with the translation will go -->
+              <div id="ipa-err">
+                <!-- <p>Errors will go here if you make any. (This will be overwritten)</p> -->
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button class="voice-button" type="button" onClick="var englishText = document.getElementById('ipa-in').value; msg.text = englishText; window.speechSynthesis.speak(msg);">
+          <embed class="speaker-interface-audio-symbol" src="/Icons/speaker-interface-audio-symbol.png">
+        </button>
+        <button type="button" onClick="console.log(document.getElementById('ety-out').value)">debug</button>
+      </div>
+      <a href="https://www.flaticon.com/free-icons/speaker" title="speaker icons">Speaker icons created by Freepik - Flaticon</a>
+    </main>
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+
+</html>    
+    
+    
+    
+    

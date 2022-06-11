@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Demonstration</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/album/">
+
+    <link href="index.css" rel="stylesheet">
+    <link href="study.css" rel="stylesheet">
+    <link href="demonstration.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.rtl.min.css" rel="stylesheet">
+
+    <!--Loading the header-->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous">
+    </script>
+    <script> 
+      $(function(){
+        $("#header").load("header.html"); 
+      });
+    </script> 
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <main>
+      <script src="text-to-ipa.js"></script>
+      <script src="vocab-list.js"></script>
+      <script src="converter-form.js"></script>
+      <div class="container">
+
+        <div class="row">
+            <div class="background1">
+                <h2>Example</h2>
+                <div class="align-center">
+                    <button id="voice-button" type="button" onClick="window.speechSynthesis.speak(msg);"">
+                        <embed class="speaker-interface-audio-symbol" src="/Icons/speaker-interface-audio-symbol.png">
+                    </button>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+
+            <div class="col">
+              <div class="background1">
+
+                <h2>Origin of Word</h2>
+
+                <div class="col-content" id="ety-out">
+                  <p style="font-size: 14px;">
+                    example (n.) late 14c., "an instance typical of a class; a model, either good or bad, action or conduct as an object of imitation; an example to be avoided; punishment as a warning," partial re-Latinization of earlier essample, asaumple (mid-13c.), from Old French essemple "sample, model, example, precedent, cautionary tale," from Latin exemplum "a sample, specimen; image, portrait; pattern, model, precedent; a warning example, one that serves as a warning," literally "that which is taken out," from eximere "remove, take out, take away; free, release, deliver, make an exception of," from ex "out" (see ex-) + emere "buy," originally "take," from PIE root *em- "to take, distribute." 
+                  </p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col">
+              <div class="row">
+                <div class="background1"> 
+                  <h2>Phonetics</h2>
+  
+                  <div class="col-content">
+                    <p>
+                      IPA form of the word here:
+                    </p>
+                    <div id="ipa-out">
+                      ɪgzæˈmpʌl
+                    </div>
+                    <p>
+                        The phoneme [ɪg] is commonly spelled "ex" at the start of a word
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="background1"> 
+                  <h2>Word in a Sentence</h2>
+  
+                  <div class="col-content">
+                    <p>
+                      This an <b>example</b> sentence for this word.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="center invisible" id="output">
+            <p id="out-id"></p>
+          </div>
+
+          
+        </div>
+      </div>
+    </main>
+    <script>
+      var msg = new SpeechSynthesisUtterance();
+
+      //Changing this word changes the demonstration word
+      msg.text = "example";
+
+      window.onload = TextToIPA.loadDict('ipadict.txt');
+      window.onload = VocabList.loadDict('VocabLists/sixthGradeWordEtymologyList.txt');
+    </script>
+    <script src="session.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+  </body>
+</html>

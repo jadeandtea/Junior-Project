@@ -1,0 +1,13 @@
+html {
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.speaker-interface-audio-symbol {
+    max-width: 100%;
+    min-width: 100%;
+    margin: 0%;
+}
+
+.voice-button {
+    max-width: 5%;
+}

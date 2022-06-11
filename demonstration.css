@@ -1,0 +1,56 @@
+input#input-id {
+    border: none;
+    width: 10.5ch;
+    background: 
+      repeating-linear-gradient(90deg, 
+          dimgrey 0, 
+          dimgrey 1ch, 
+          transparent 0, 
+          transparent 1.5ch) 
+        0 100%/100% 2px no-repeat;
+    color: dimgrey;
+    /*font size changes entire box*/
+    font: 150% consolas, monospace;
+    letter-spacing: .5ch;
+    margin-left: 40%;
+}
+
+.speaker-interface-audio-symbol {
+    max-width: 90%;
+    min-width: 90%;
+    margin: 0%;
+}
+
+#voice-button{
+    min-width: 25px;
+    height: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.align-center {
+    margin: auto !important;
+    width: 0%;
+    min-width: 25px;
+    min-height: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.center {
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#output {
+    background-color: #99d5d2;
+    opacity: 75%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-radius: 5px;
+    font-size:x-large;
+}
